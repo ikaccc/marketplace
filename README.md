@@ -1,74 +1,75 @@
-# 🛍️ Simple Marketplace Frontend
+# 🛒 Simple Marketplace
 
-This is a simple marketplace frontend built using **Next.js** and **Material-UI (MUI)**.  
-The application fetches and displays products from the [Fake Store API](https://fakestoreapi.com/).
+This is a simple marketplace frontend built with **Next.js**, **TypeScript**, and **Material UI (MUI)**.  
+It includes product listing, search, filter, cart functionality, checkout form, and dark mode toggle.
 
-## 🚀 Features
+---
 
-- 🏠 Landing page that displays a list of products in a responsive grid layout
-- 🔍 Search functionality to filter products by name (case-insensitive)
-- 📄 Product detail page with full product info
-- 🛒 Basic cart functionality *(optional bonus)*
-- 🧮 Filtering by category and price *(optional bonus)*
-- 📚 Clean UI with Material-UI components
+## ✨ Features
 
-## 🛠 Tech Stack
+- ✅ Product listing from Fake Store API
+- 🔍 Search & filter by category
+- 🛒 Add to cart, remove, update quantity
+- 💾 Cart persistence with `localStorage`
+- 📦 Checkout page with order summary + fake form
+- 🧹 Clear Cart button
+- 🌙 Dark Mode toggle (context-based)
 
-- [Next.js](https://nextjs.org/)
-- [Material-UI (MUI)](https://mui.com/)
-- [Axios](https://axios-http.com/)
+---
+
+## 🚀 Tech Stack
+
+- [Next.js (App Router)](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Material UI](https://mui.com/)
+- [Axios](https://axios-http.com/)
+- [notistack](https://iamhosseindhv.com/notistack)
 
-## 📁 Project Structure
-
-```
-src/
-├── components/         # Reusable UI components
-├── context/            # Cart context (bonus)
-├── pages/              # Next.js pages (index, product/[id], cart)
-├── styles/             # Global styles
-└── utils/              # API helpers
-```
+---
 
 ## 📦 Getting Started
 
-### 1. Clone the Repository
-
 ```bash
-git clone https://github.com/ikaccc/marketplace.git
-cd marketplace
-```
-
-### 2. Install Dependencies
-
-```bash
+# Install dependencies
 npm install
-# or
-yarn
-```
 
-### 3. Run the Development Server
-
-```bash
+# Run the dev server
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+App will be running at:  
+👉 `http://localhost:3000`
 
-## 🔗 API Reference
+---
 
-- All products: `https://fakestoreapi.com/products`
-- Single product: `https://fakestoreapi.com/products/:id`
-- Categories: `https://fakestoreapi.com/products/categories`
+## 🗂 Folder Structure
 
-## 📌 Assumptions
+```
+src/
+├── app/               # Next.js app pages (App Router)
+│   ├── products/      # Product listing page
+│   ├── cart/          # Cart page
+│   └── checkout/      # Checkout page
+├── components/        # Reusable UI components
+├── context/           # CartContext & ThemeContext
+├── lib/               # MUI theme & emotion setup
+├── types/             # TypeScript types
+└── styles/            # Global styles (globals.css)
+```
 
-- This project is frontend-only.
-- Cart and filters are optional bonus features.
-- Data is fetched client-side from the public Fake Store API.
+---
+
+## 📝 Notes
+
+- Product data is fetched from [Fake Store API](https://fakestoreapi.com/)
+- All cart data is stored in `localStorage`
+- Orders are saved locally for demo purposes
+- Dark mode is persisted in state (can be extended to localStorage)
+
+
+---
 
 ## 📄 License
 
 This project is open-sourced and made for demonstration or educational purposes.
+
